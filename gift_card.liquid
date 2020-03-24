@@ -1,0 +1,82 @@
+{% layout 'gift_card' %}
+
+{%- assign formatted_initial_value = gift_card.initial_value | money_without_trailing_zeros: gift_card.currency -%}
+{%- assign formatted_initial_value_stripped = formatted_initial_value | strip_html -%}
+
+<header style="margin-top:55px;" class="giftcard__header text-center" role="banner">
+  <div class="site-header__logo h1 text-center">
+    <a href="{{ shop.url }}" class="site-header__link site-header__logo-link">{{ shop.name }}</a>
+  </div>
+
+  <h2>{{ 'gift_cards.issued.subtext' | t }} for<br>{{ gift_card.product.title }}</h2>
+  {% unless gift_card.enabled %}
+    <p class="giftcard__tag">{{ 'gift_cards.issued.disabled' | t }}</p>
+  {% endunless %}
+  {% assign gift_card_expiry_date = gift_card.expires_on | date: format: "basic" %}
+  {% if gift_card.expired and gift_card.enabled %}
+    <p class="giftcard__tag">{{ 'gift_cards.issued.expired' | t: expiry: gift_card_expiry_date }}</p>
+  {% endif %}
+  {% if gift_card.expired != true and gift_card.expires_on and gift_card.enabled %}
+    <p class="giftcard__tag giftcard__tag--active">{{ 'gift_cards.issued.active' | t: expiry: gift_card_expiry_date }}</p>
+  {% endif %}
+</header>
+
+
+
+<div class="giftcard-wrapper">
+  <main class="giftcard" role="main">
+    
+    {%- if gift_card.product.featured_image -%}
+    {% assign gift_card_image = gift_card.product.featured_image | img_url: '1024x1024' | img_tag: 'Gift card illustration test' %}
+    {%- else -%}
+    {% assign gift_card_image = 'gift-card/card.jpg' | shopify_asset_url | img_tag: 'Gift card illustration test' %}
+    {%- endif -%}
+    
+    <div class="giftcard__wrap" style="margin-bottom:25px;">
+      {{ gift_card_image }}
+
+      {%- assign initial_value_size = formatted_initial_value | size -%}
+      <div class="h1 giftcard__amount{% if initial_value_size > 6 %} giftcard__amount--medium{% endif %}">
+        {% if gift_card.balance != gift_card.initial_value %}
+          <span class="giftcard__tooltip">
+            <span class="giftcard__tooltip-label">{{ 'gift_cards.issued.remaining_html' | t: balance: gift_card.balance | money }}</span>
+          </span>
+        {% endif %}
+        <strong>{{ formatted_initial_value }}</strong>
+      </div>
+
+      {% capture string_with_newlines %}
+Hello
+there
+{% endcapture %}
+      
+      {%- assign code_size = gift_card.code | format_code | size -%}
+      <div class="giftcard__code">
+        <div class="giftcard__code__inner">
+          <strong>{{ gift_card.customer.name }}</strong>
+          <br>
+          {{ gift_card.customer.email }}
+          <br>
+          {{ gift_card.code | format_code }}
+        </div>
+      </div>
+    </div>
+
+
+    <ul class="giftcard-action-list text-center">
+   
+      <li>
+        <button style="display:block;margin: 0 auto;" type="button" class="btn btn--secondary print-link" onclick="window.print();">
+          {{ 'gift_cards.issued.print' | t }}
+        </button>
+      </li>
+      {% if gift_card.pass_url %}
+        <li>
+          <a class="giftcard__apple-wallet" href="{{ gift_card.pass_url }}">
+            <img class="giftcard__apple-wallet-image" src="{{ 'gift-card/add-to-apple-wallet.svg' | shopify_asset_url }}" width="120" height="40" alt="{{ 'gift_cards.issued.add_to_apple_wallet' | t }}">
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </main>
+</div>
