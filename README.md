@@ -4,7 +4,7 @@ Some Liquid and CSS to help Shopify users setup a "Gift Card Marketplace" with a
 ### **This is a temporary solution to a complex problem.**
 
 ## Why do I need this?
-By default, when you click "View Gift Card" after you purchase a gift card from a Shopify store, the image used is NOT the Primary photo used on the Gift Card product itself. 
+By default, when you click "View Gift Card" after you purchase a gift card from a Shopify store, the image used is NOT the Primary photo used on the Gift Card product itself. [Original Gift Card](https://screenshot.click/24-09-tndfw-dwfee.jpg) | [Updated Gift Card](https://screenshot.click/24-12-r1q8f-00gc7.jpg).
 
 These changes offer two major distinctions:
 1. The image used after purchase will be the primary image from the Gift Card Product (please use the template attached here for best sizing).
