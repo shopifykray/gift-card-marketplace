@@ -7,13 +7,13 @@ Some Liquid and CSS to help Shopify users setup a "Gift Card Marketplace" with a
 By default, when you click "View Gift Card" after you purchase a gift card from a Shopify store, the image used is NOT the Primary photo used on the Gift Card product itself. 
 
 These changes offer two major distinctions:
-1. The image used after purchase will be the primary image from the Gift Card Product (please use the template attached here for best sizing)
-2. It add the customers Name and Email address to the gift card for better verification capabilities.
+1. The image used after purchase will be the primary image from the Gift Card Product (please use the template attached here for best sizing).
+2. It adds the customers Name and Email address to the gift card for better verification capabilities.
 
 ## I don't want to touch code!
 If you have an unmodified version of one of the Shopify Themes, you can download a complete theme package [from this link](https://drive.google.com/drive/folders/1ZBMLuq9tRc19WMzrKltEHqzmFF7ze4SA?usp=sharing).
 
-**You will still be required to Customize the theme using the Theme Editor!** While this will eliminate the need to get into the code, it's basically a fresh install with customizations already done for you.
+**You will still be required to Customize the theme using the Theme Editor!** While this will eliminate the need to get into the code, it's basically a fresh install with the Gift Card customizations already done for you.
 
 ## What am I getting here?
 This repository contains a couple things you will need.
