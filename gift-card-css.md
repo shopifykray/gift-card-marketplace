@@ -89,7 +89,7 @@ COMING SOON
 
 ## Supply
 ```
-/* START - GIFT CARD NARRATIVE THEME */
+/* START - GIFT CARD SUPPLY THEME */
 body.template-gift_card { background: #fafafa !important; }
 body.template-gift_card #shopify-section-header, body.template-gift_card #shopify-section-footer { display: none; }
 .giftcard__header h1, .giftcard__header h2 { font-family: "Montserrat", sans-serif; }
@@ -109,7 +109,7 @@ ul.giftcard-action-list { padding-left: 0; }
   .giftcard-wrapper { width: 90%; }
   
   }
-/* END - GIFT CARD NARRATIVE THEME */
+/* END - GIFT CARD SUPPLY THEME */
 ```
 
 ## Venture
