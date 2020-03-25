@@ -88,7 +88,29 @@ ul.giftcard-action-list { padding-left: 0; }
 COMING SOON
 
 ## Supply
-COMING SOON
+```
+/* START - GIFT CARD NARRATIVE THEME */
+body.template-gift_card { background: #fafafa !important; }
+body.template-gift_card #shopify-section-header, body.template-gift_card #shopify-section-footer { display: none; }
+.giftcard__header h1, .giftcard__header h2 { font-family: "Montserrat", sans-serif; }
+.giftcard-wrapper { max-width: 588px; margin: 0 auto; }
+.giftcard__wrap { -webkit-font-smoothing: antialiased; font-size: 15px; font-family: inherit; font-style: normal; font-weight: 400; color: inherit; line-height: 1.5; box-sizing: border-box; position: relative; margin: 27.5px auto; border-radius: 10px; }
+.giftcard__amount { -webkit-font-smoothing: antialiased; box-sizing: border-box; margin: 0 0 17.5px; font-family: inherit; font-style: normal; font-weight: 700; overflow-wrap: break-word; word-wrap: break-word; text-transform: none; letter-spacing: 0; position: absolute; top: 0; right: 0; color: #fff; font-size: 5vw; line-height: 1.2; padding: 10px; z-index: 5; }
+.giftcard__wrap img { -webkit-font-smoothing: antialiased; font-size: 15px; font-family: inherit; font-style: normal; font-weight: 400; color: #3a3a3a; line-height: 1.5; box-sizing: border-box; max-width: 100%; border: 0; position: relative; display: block; border-radius: 10px; z-index: 2; }
+.giftcard__code { -webkit-font-smoothing: antialiased; font-family: inherit; font-style: normal; font-weight: 400; color: #3a3a3a; line-height: 1.5; box-sizing: border-box; position: absolute; text-align: center; width: 90%; z-index: 5; bottom: 8%; left: 50%; transform: translateX(-50%); font-size: 0.75em; }
+.giftcard__code__inner { -webkit-font-smoothing: antialiased; font-family: inherit; font-style: normal; font-weight: 400; color: #3a3a3a; line-height: 1.5; text-align: center; font-size: 1.2em; box-sizing: border-box; width: 100%; display: inline-block; vertical-align: baseline; background-color: #fff; padding: 0.5em; border-radius: 4px; box-shadow: 0 0 0 1px rgba(0,0,0,0.1); }
+.giftcard__product-title { font-size: 2.5rem; font-weight: 600; }
+.giftcard li { list-style-type: none; }
+ul.giftcard-action-list { padding-left: 0; }
+
+@media only screen and (max-width: 749px) {
+  
+  .giftcard__amount { font-size: 8vw; }
+  .giftcard-wrapper { width: 90%; }
+  
+  }
+/* END - GIFT CARD NARRATIVE THEME */
+```
 
 ## Venture
 COMING SOON
