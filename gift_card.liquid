@@ -8,7 +8,7 @@
     <a href="{{ shop.url }}" class="site-header__link site-header__logo-link">{{ shop.name }}</a>
   </div>
 
-  <h2>{{ 'gift_cards.issued.subtext' | t }} for<br>{{ gift_card.product.title }}</h2>
+  <h2>Here's your Gift Card for<br><em>{{ gift_card.product.title }}</em></h2>
   {% unless gift_card.enabled %}
     <p class="giftcard__tag">{{ 'gift_cards.issued.disabled' | t }}</p>
   {% endunless %}
