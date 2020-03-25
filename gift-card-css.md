@@ -126,7 +126,7 @@ ul.giftcard-action-list { padding-left: 0; }
 
 @media only screen and (min-width: 750px) {
   
-    .medium-up--four-fifths { width: 100%; }
+    body.template-gift_card .medium-up--four-fifths { width: 100%; }
   
   }
 /* END - GIFT CARD SIMPLE THEME */
