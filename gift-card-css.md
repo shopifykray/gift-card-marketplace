@@ -98,6 +98,7 @@ body.template-gift_card #shopify-section-header, body.template-gift_card #shopif
 .giftcard__product-title { font-size: 2.5rem; font-weight: 600; }
 .giftcard li { list-style-type: none; }
 ul.giftcard-action-list { padding-left: 0; }
+.critical-hide { display: none !important; }
 
 @media only screen and (max-width: 749px) {
   
