@@ -1,4 +1,7 @@
-# gift-card-marketplace
+# gift-card-marketplace DEPRECATED
+
+## PLEASE NOTE THAT THIS REPO CONTAINS OLD THEME CODE BEFORE ONLINE STORE 2.0 AND IS NO LONGER ACCURATE.
+
 Some Liquid and CSS to help Shopify users setup a "Gift Card Marketplace" with a better user experience. 
 
 ### **This is a temporary solution to a complex problem.**
